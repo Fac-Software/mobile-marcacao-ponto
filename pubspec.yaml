@@ -1,0 +1,43 @@
+name: ponto
+description: Marcação e Gerenciamento de ponto
+
+publish_to:
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  google_fonts: ^1.1.1
+  liquid_progress_indicator: ^0.3.2
+  mask_text_input_formatter: ^1.1.0
+
+
+  cupertino_icons: ^0.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/relogio-icon.png
+    - images/FAC-SOFTWARE-OFICIAL-ICON.png
+    - images/numbers/BACK-min.png
+    - images/numbers/NUMBER-0-BUTTON-min.png
+    - images/numbers/NUMBER-1-BUTTON-min.png
+    - images/numbers/NUMBER-2-BUTTON-min.png
+    - images/numbers/NUMBER-3-BUTTON-min.png
+    - images/numbers/NUMBER-4-BUTTON-min.png
+    - images/numbers/NUMBER-5-BUTTON-min.png
+    - images/numbers/NUMBER-6-BUTTON-min.png
+    - images/numbers/NUMBER-7-BUTTON-min.png
+    - images/numbers/NUMBER-8-BUTTON-min.png
+    - images/numbers/NUMBER-9-BUTTON-min.png
