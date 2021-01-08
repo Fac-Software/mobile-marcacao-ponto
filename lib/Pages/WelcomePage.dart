@@ -7,6 +7,7 @@ import 'package:ponto/Modules/Assets.dart';
 import 'package:ponto/Modules/PatternColors.dart';
 import 'package:ponto/Utils/ConvertPercentage.dart';
 import 'package:ponto/Utils/Widgets/SizedBoxSpacing.dart';
+import 'package:ponto/Utils/Widgets/TitleText.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   void initState() {
     Timer timer;
-    timer = Timer.periodic(Duration(milliseconds: 50), (_) {
+    timer = Timer.periodic(Duration(milliseconds: 10), (_) {
       print('Percent Update');
       setState(() {
         percent += 1;
@@ -41,11 +42,10 @@ class _WelcomePageState extends State<WelcomePage> {
 
     // A Imagem se for Paisagem
     double imageSizeCaseLandscape =
-        ConvertPercentage.convertWidgetPercentageFromHeight(
-            context, 44.80, false);
+        ConvertPercentage.convertWidgetPercentageFromHeight(context, 45, false);
     // A Imagem se for Retrato
     double imageSizeCasePortrait =
-        ConvertPercentage.convertWidgetPercentageFromHeight(context, 56, false);
+        ConvertPercentage.convertWidgetPercentageFromHeight(context, 35, false);
 
     //<-- Linear Progress Bar -->
 
@@ -62,14 +62,6 @@ class _WelcomePageState extends State<WelcomePage> {
     double widthLinearProgressBarIfPortrait =
         ConvertPercentage.convertWidgetPercentageFromWidth(context, 75);
 
-    //<-- Titulo da Pagina -->
-    // Calculando o Tamanho da Fonte quando for Paisagem
-    double fontSizeTitleCaseLandscape =
-        ConvertPercentage.convertTextPercentage(context, 11.45, false, 102, 75);
-    // Calculando o Tamanho da Fonte quando for Retrato
-    double fontSizeTitleCasePortrait =
-        ConvertPercentage.convertTextPercentage(context, 7.45, false, 102, 75);
-
     return Scaffold(
       body: OrientationBuilder(
         builder: (context, orientation) {
@@ -78,15 +70,7 @@ class _WelcomePageState extends State<WelcomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Marcação de Ponto',
-                  style: GoogleFonts.ribeyeMarrow(
-                      color: PatternColors.primaryTextColor,
-                      fontSize: orientation == Orientation.portrait
-                          ? fontSizeTitleCasePortrait
-                          : fontSizeTitleCaseLandscape),
-                  textAlign: TextAlign.center,
-                ),
+                TitleText(orientation, 'Marcação de Ponto'),
                 SizedSpacing(5),
                 Image.asset(Assets.RELOGIO_ICON,
                     height: orientation == Orientation.portrait

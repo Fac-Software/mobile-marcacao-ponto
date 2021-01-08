@@ -1,0 +1,4 @@
+enum DeviceOrientation{
+  Portrait,
+  Landscape
+}
