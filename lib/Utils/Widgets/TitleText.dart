@@ -18,7 +18,7 @@ class TitleText extends StatelessWidget {
         ConvertPercentage.convertTextPercentage(context, 11.45, false, 102, 75);
     // Calculando o Tamanho da Fonte quando for Retrato
     double fontSizeTitleCasePortrait =
-        ConvertPercentage.convertTextPercentage(context, 7, false, 102, 75);
+        ConvertPercentage.convertTextPercentage(context, 6, false, 102, 75);
 
     return Text(
       textTitle,

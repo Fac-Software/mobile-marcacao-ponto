@@ -20,8 +20,9 @@ class _HomeState extends State<Home> {
 
   String getSystemTime() {
     DateTime myDT = DateTime.now(); //Current DateTime
-    DateTime eastCoast =
-        dateTimeToZone(zone: "ART", datetime: myDT); //DateTime in EST zone
+    DateTime eastCoast = dateTimeToZone(
+        zone: "ART",
+        datetime: myDT); //DateTime in EST zone
 
     String format = new DateFormat.Hms().format(eastCoast);
     return format;
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
           "${getSystemTime()}",
           style: TextStyle(
               color: PatternColors.primaryTextColor,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.w700),
         );
       }),
@@ -54,31 +55,31 @@ class _HomeState extends State<Home> {
                   borderRadius: BorderRadius.circular(
                       (orientation == Orientation.portrait)
                           ? ConvertPercentage.convertWidgetPercentageFromHeight(
-                              context, 5, false)
+                          context, 5, false)
                           : ConvertPercentage.convertWidgetPercentageFromHeight(
-                              context, 22.5, false)),
+                          context, 22.5, false)),
                 ),
                 child: (orientation == Orientation.portrait)
                     ? IconButton(
-                        color: PatternColors.secondaryColor,
-                        icon: Icon(
-                          Icons.table_chart,
-                          color: Colors.white,
-                        ),
-                      )
+                  color: PatternColors.secondaryColor,
+                  icon: Icon(
+                    Icons.table_chart,
+                    color: Colors.white,
+                  ),
+                )
                     : Row(
-                        children: [
-                          Icon(
-                            Icons.table_chart,
-                            color: Colors.white,
-                          ),
-                          SizedBox(width: 5),
-                          Text(
-                            'Ver Banco de Horas',
-                            style: TextStyle(color: Colors.white),
-                          )
-                        ],
-                      ),
+                  children: [
+                    Icon(
+                      Icons.table_chart,
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 5),
+                    Text(
+                      'Ver Banco de Horas',
+                      style: TextStyle(color: Colors.white),
+                    )
+                  ],
+                ),
               ),
             )),
       ],
@@ -108,18 +109,18 @@ class _HomeState extends State<Home> {
                       color: PatternColors.primaryTextColor,
                       fontSize: (orientation == Orientation.portrait)
                           ? ConvertPercentage.convertWidgetPercentageFromHeight(
-                              context, 5, false,
-                              appBar: appBar(context, orientation))
+                          context, 4, false,
+                          appBar: appBar(context, orientation))
                           : ConvertPercentage.convertWidgetPercentageFromHeight(
-                              context, 10, false,
-                              appBar: appBar(context, orientation))),
+                          context, 10, false,
+                          appBar: appBar(context, orientation))),
                 ),
                 SizedBox(
                   height: (orientation == Orientation.portrait)
                       ? ConvertPercentage.convertWidgetPercentageFromHeight(
-                          context, 10, false)
+                      context, 10, false)
                       : ConvertPercentage.convertWidgetPercentageFromHeight(
-                          context, 5, false),
+                      context, 5, false),
                 ),
                 GestureDetector(
                   child: RaisedButton(
@@ -137,11 +138,11 @@ class _HomeState extends State<Home> {
                           'images/DIGITAL-ICON.png',
                           width: (orientation == Orientation.portrait)
                               ? ConvertPercentage
-                                  .convertWidgetPercentageFromHeight(
-                                      context, 35, false)
+                              .convertWidgetPercentageFromHeight(
+                              context, 35, false)
                               : ConvertPercentage
-                                  .convertWidgetPercentageFromHeight(
-                                      context, 45, false),
+                              .convertWidgetPercentageFromHeight(
+                              context, 45, false),
                         )
                       ],
                     ),
@@ -187,9 +188,9 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: (orientation == Orientation.portrait)
                       ? ConvertPercentage.convertWidgetPercentageFromHeight(
-                          context, 5, false)
+                      context, 5, false)
                       : ConvertPercentage.convertWidgetPercentageFromHeight(
-                          context, 2.5, false),
+                      context, 2.5, false),
                 ),
                 Text(
                   'Coloque o dedo na Imagem',
@@ -197,16 +198,16 @@ class _HomeState extends State<Home> {
                       color: PatternColors.primaryTextColor,
                       fontSize: (orientation == Orientation.portrait)
                           ? ConvertPercentage.convertWidgetPercentageFromHeight(
-                              context, 3, false)
+                          context, 3, false)
                           : ConvertPercentage.convertWidgetPercentageFromHeight(
-                              context, 5, false)),
+                          context, 5, false)),
                 ),
                 SizedBox(
                   height: (orientation == Orientation.portrait)
                       ? ConvertPercentage.convertWidgetPercentageFromHeight(
-                          context, 10, false)
+                      context, 10, false)
                       : ConvertPercentage.convertWidgetPercentageFromHeight(
-                          context, 2.5, false),
+                      context, 2.5, false),
                 ),
                 Row(
                   mainAxisAlignment: (orientation == Orientation.portrait)
@@ -215,18 +216,18 @@ class _HomeState extends State<Home> {
                   children: [
                     Flexible(
                         child: Text(
-                      'Ultimas marcações de Hoje: 08:00; 12:00; 13:00; 17:00',
-                      style: GoogleFonts.rhodiumLibre(
-                          fontSize: (orientation == Orientation.portrait)
-                              ? ConvertPercentage
+                          'Ultimas marcações de Hoje: 08:00; 12:00; 13:00; 17:00',
+                          style: GoogleFonts.rhodiumLibre(
+                              fontSize: (orientation == Orientation.portrait)
+                                  ? ConvertPercentage
                                   .convertWidgetPercentageFromHeight(
-                                      context, 2, false)
-                              : ConvertPercentage
+                                  context, 2, false)
+                                  : ConvertPercentage
                                   .convertWidgetPercentageFromHeight(
-                                      context, 3.5, false),
-                          color: PatternColors.primaryTextColor),
-                      textAlign: TextAlign.center,
-                    ))
+                                  context, 3.5, false),
+                              color: PatternColors.primaryTextColor),
+                          textAlign: TextAlign.center,
+                        ))
                   ],
                 )
               ],

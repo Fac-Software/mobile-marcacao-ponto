@@ -41,26 +41,24 @@ class _WelcomePageState extends State<WelcomePage> {
     //<-- Imagem -->
 
     // A Imagem se for Paisagem
-    double imageSizeCaseLandscape =
-        ConvertPercentage.convertWidgetPercentageFromHeight(context, 45, false);
+    double imageSizeCaseLandscape = ConvertPercentage
+        .convertWidgetPercentageFromHeight(context, 45, false);
     // A Imagem se for Retrato
-    double imageSizeCasePortrait =
-        ConvertPercentage.convertWidgetPercentageFromHeight(context, 35, false);
+    double imageSizeCasePortrait = ConvertPercentage
+        .convertWidgetPercentageFromHeight(context, 35, false);
 
     //<-- Linear Progress Bar -->
 
     // Calculando o Tamanho quando a orientação for paisagem
-    double heightLinearProgressBarIfLandscape =
-        ConvertPercentage.convertWidgetPercentageFromHeight(
-            context, 13.45, false);
-    double widthLinearProgressBarIfLandscape =
-        ConvertPercentage.convertWidgetPercentageFromWidth(context, 50);
+    double heightLinearProgressBarIfLandscape = ConvertPercentage
+        .convertWidgetPercentageFromHeight(context, 13.45, false);
+    double widthLinearProgressBarIfLandscape = ConvertPercentage
+        .convertWidgetPercentageFromWidth(context, 50);
     // Calculando o Tamanho quando a orientação for retrato
-    double heightLinearProgressBarIfPortrait =
-        ConvertPercentage.convertWidgetPercentageFromHeight(
-            context, 7.45, false);
-    double widthLinearProgressBarIfPortrait =
-        ConvertPercentage.convertWidgetPercentageFromWidth(context, 75);
+    double heightLinearProgressBarIfPortrait = ConvertPercentage
+        .convertWidgetPercentageFromHeight(context, 7.45, false);
+    double widthLinearProgressBarIfPortrait = ConvertPercentage
+        .convertWidgetPercentageFromWidth(context, 75);
 
     return Scaffold(
       body: OrientationBuilder(
@@ -86,8 +84,7 @@ class _WelcomePageState extends State<WelcomePage> {
                       : widthLinearProgressBarIfLandscape,
                   child: LiquidLinearProgressIndicator(
                     value: percent / 100,
-                    valueColor:
-                        AlwaysStoppedAnimation(PatternColors.backgroundColor),
+                    valueColor: AlwaysStoppedAnimation(PatternColors.backgroundColor),
                     backgroundColor: Colors.white,
                     borderColor: Colors.tealAccent[400],
                     borderWidth: 5.0,

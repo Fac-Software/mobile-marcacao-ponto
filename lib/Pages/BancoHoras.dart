@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ponto/Modules/PatternColors.dart';
 import 'package:ponto/Utils/ConvertPercentage.dart';
 import 'package:ponto/Utils/HexColor.dart';
@@ -25,7 +26,7 @@ class _BancoHorasState extends State<BancoHoras> {
           "Banco de Horas",
           style: TextStyle(
               color: PatternColors.primaryTextColor,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
@@ -106,7 +107,7 @@ class _BancoHorasState extends State<BancoHoras> {
           borderRadius: BorderRadius.all(Radius.circular(15.0)),
           border: Border.all(color: HexColor.fromHex("210066"), width: 3),
         ),
-        padding: EdgeInsets.all(7.5),
+        padding: EdgeInsets.only(left: 7.5, right: 7.5),
       );
     }
 
@@ -142,7 +143,7 @@ class _BancoHorasState extends State<BancoHoras> {
           borderRadius: BorderRadius.all(Radius.circular(15.0)),
           border: Border.all(color: HexColor.fromHex("210066"), width: 3),
         ),
-        padding: EdgeInsets.all(7.5),
+        padding: EdgeInsets.only(left: 7.5, right: 7.5),
       );
     }
     return OrientationBuilder(
@@ -158,7 +159,7 @@ class _BancoHorasState extends State<BancoHoras> {
                 top: ConvertPercentage
                     .convertWidgetPercentageFromHeight(
                     context,
-                    7.5,
+                    3.5,
                     false,
                     appBar: appBar( orientation)),
                 left: ConvertPercentage
@@ -215,11 +216,24 @@ class _BancoHorasState extends State<BancoHoras> {
                         height: ConvertPercentage
                             .convertWidgetPercentageFromHeight(
                             context,
-                            47.5,
+                            55,
                             false,
                             appBar: appBar(orientation)),
                         child: ListView(
                           scrollDirection: Axis.vertical,
+                          itemExtent: orientation == Orientation.portrait ?
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(
+                              context,
+                              24,
+                              false,
+                              appBar: appBar(orientation)) :
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(
+                              context,
+                              48,
+                              false,
+                              appBar: appBar(orientation)),
                           children: <Widget>[
                             dataHorario(appBar(orientation), orientation),
                             dataHorario(appBar(orientation), orientation),
@@ -254,10 +268,30 @@ class _BancoHorasState extends State<BancoHoras> {
                       color: HexColor.fromHex('DCCCFF')),
                 ),
               ),
-              height: ConvertPercentage
+              child: Center(
+                child: Text('26/04',
+                  style: GoogleFonts.ribeyeMarrow(
+                      fontSize: (orientation == Orientation.portrait) ?
+                      ConvertPercentage
+                          .convertWidgetPercentageFromHeight(context, 4, false, appBar: appBar)
+                          :
+                      ConvertPercentage
+                          .convertWidgetPercentageFromHeight(context, 10, false, appBar: appBar),
+                      color: HexColor.fromHex('DCCCFF')
+                  ),
+                ),
+              ),
+              height: (orientation == Orientation.portrait) ?
+              ConvertPercentage
                   .convertWidgetPercentageFromHeight(
                   context,
                   24,
+                  false,
+                  appBar: appBar) :
+              ConvertPercentage
+                  .convertWidgetPercentageFromHeight(
+                  context,
+                  48,
                   false,
                   appBar: appBar),
             )),
@@ -281,10 +315,30 @@ class _BancoHorasState extends State<BancoHoras> {
                           color: HexColor.fromHex('DCCCFF')),
                     ),
                   ),
-                  height: ConvertPercentage
+                  child: Center(
+                    child: Text('08:00',
+                      style: GoogleFonts.rhodiumLibre(
+                          color: HexColor.fromHex('DCCCFF'),
+                          fontSize: (orientation == Orientation.portrait)
+                              ?
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 2.5, false, appBar: appBar) :
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 5, false, appBar: appBar)
+                      ),
+                    ),
+                  ),
+                  height: (orientation == Orientation.portrait) ?
+                  ConvertPercentage
                       .convertWidgetPercentageFromHeight(
                       context,
                       6,
+                      false,
+                      appBar: appBar) :
+                  ConvertPercentage
+                      .convertWidgetPercentageFromHeight(
+                      context,
+                      12,
                       false,
                       appBar: appBar),
                 ),
@@ -305,10 +359,30 @@ class _BancoHorasState extends State<BancoHoras> {
                           color: HexColor.fromHex('DCCCFF')),
                     ),
                   ),
-                  height: ConvertPercentage
+                  child: Center(
+                    child: Text('12:00',
+                      style: GoogleFonts.rhodiumLibre(
+                          color: HexColor.fromHex('DCCCFF'),
+                          fontSize: (orientation == Orientation.portrait)
+                              ?
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 2.5, false, appBar: appBar) :
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 5, false, appBar: appBar)
+                      ),
+                    ),
+                  ),
+                  height: (orientation == Orientation.portrait) ?
+                  ConvertPercentage
                       .convertWidgetPercentageFromHeight(
                       context,
                       6,
+                      false,
+                      appBar: appBar) :
+                  ConvertPercentage
+                      .convertWidgetPercentageFromHeight(
+                      context,
+                      12,
                       false,
                       appBar: appBar),
                 ),
@@ -329,10 +403,30 @@ class _BancoHorasState extends State<BancoHoras> {
                           color: HexColor.fromHex('DCCCFF')),
                     ),
                   ),
-                  height: ConvertPercentage
+                  child: Center(
+                    child: Text('13:00',
+                      style: GoogleFonts.rhodiumLibre(
+                          color: HexColor.fromHex('DCCCFF'),
+                          fontSize: (orientation == Orientation.portrait)
+                              ?
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 2.5, false, appBar: appBar) :
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 5, false, appBar: appBar)
+                      ),
+                    ),
+                  ),
+                  height: (orientation == Orientation.portrait) ?
+                  ConvertPercentage
                       .convertWidgetPercentageFromHeight(
                       context,
                       6,
+                      false,
+                      appBar: appBar) :
+                  ConvertPercentage
+                      .convertWidgetPercentageFromHeight(
+                      context,
+                      12,
                       false,
                       appBar: appBar),
                 ),
@@ -353,10 +447,30 @@ class _BancoHorasState extends State<BancoHoras> {
                           color: HexColor.fromHex('DCCCFF')),
                     ),
                   ),
-                  height: ConvertPercentage
+                  child: Center(
+                    child: Text('17:00',
+                      style: GoogleFonts.rhodiumLibre(
+                          color: HexColor.fromHex('DCCCFF'),
+                          fontSize: (orientation == Orientation.portrait)
+                              ?
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 2.5, false, appBar: appBar) :
+                          ConvertPercentage
+                              .convertWidgetPercentageFromHeight(context, 5, false, appBar: appBar)
+                      ),
+                    ),
+                  ),
+                  height: (orientation == Orientation.portrait) ?
+                  ConvertPercentage
                       .convertWidgetPercentageFromHeight(
                       context,
                       6,
+                      false,
+                      appBar: appBar) :
+                  ConvertPercentage
+                      .convertWidgetPercentageFromHeight(
+                      context,
+                      12,
                       false,
                       appBar: appBar),
                 ),
@@ -364,6 +478,42 @@ class _BancoHorasState extends State<BancoHoras> {
             )),
         Flexible(
             child: Container(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text((orientation == Orientation.portrait) ?
+                    "08 hrs e \n 00 min" :
+                    "08 hrs e 00 min",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.ribeyeMarrow(
+                        color: HexColor.fromHex('DCCCFF'),
+                        fontSize: (orientation == Orientation.portrait) ?
+                        ConvertPercentage.convertWidgetPercentageFromHeight(context, 3, false) :
+                        ConvertPercentage.convertWidgetPercentageFromHeight(context, 5.5, false),
+                      ),
+                    ),
+                    SizedBox(
+                      height: ConvertPercentage
+                          .convertWidgetPercentageFromHeight(context, 3.5, false, appBar: appBar),
+                    ),
+                    Flexible(
+                      child: Text('Jornada Inconsistente',
+                        style: TextStyle(
+                            fontSize: (orientation == Orientation.portrait) ?
+                            ConvertPercentage
+                                .convertWidgetPercentageFromHeight(context, 2, false, appBar: appBar):
+                            ConvertPercentage
+                                .convertWidgetPercentageFromHeight(context, 4, false, appBar: appBar),
+                            color: HexColor.fromHex('DCCCFF')
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              padding: EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: HexColor.fromHex('9766FF'),
                 border: Border(
@@ -372,10 +522,17 @@ class _BancoHorasState extends State<BancoHoras> {
                       color: HexColor.fromHex('DCCCFF')),
                 ),
               ),
-              height: ConvertPercentage
+              height: (orientation == Orientation.portrait) ?
+              ConvertPercentage
                   .convertWidgetPercentageFromHeight(
                   context,
                   24,
+                  false,
+                  appBar: appBar) :
+              ConvertPercentage
+                  .convertWidgetPercentageFromHeight(
+                  context,
+                  48,
                   false,
                   appBar: appBar),
             )),
@@ -403,7 +560,7 @@ class _BancoHorasState extends State<BancoHoras> {
                       false) : ConvertPercentage
                       .convertWidgetPercentageFromHeight(
                       context,
-                      5,
+                      6,
                       false),
                 ),
               ),
@@ -450,7 +607,7 @@ class _BancoHorasState extends State<BancoHoras> {
                   false) : ConvertPercentage
                   .convertWidgetPercentageFromHeight(
                   context,
-                  5,
+                  6,
                   false),
             ),
           ),
@@ -489,7 +646,7 @@ class _BancoHorasState extends State<BancoHoras> {
                       false) : ConvertPercentage
                       .convertWidgetPercentageFromHeight(
                       context,
-                      5,
+                      6,
                       false),
                 ),
               ),

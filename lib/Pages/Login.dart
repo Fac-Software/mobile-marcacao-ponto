@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:ponto/Modules/PatternColors.dart';
 import 'package:ponto/Utils/ConvertPercentage.dart';
 import 'package:ponto/Utils/Widgets/SizedBoxSpacing.dart';
@@ -20,6 +19,9 @@ class _LoginState extends State<Login> {
   // ignore: must_call_super
   void initState() {
     _passwordVisible = false;
+    setState(() {
+      controller.text = '';
+    });
   }
 
   @override
@@ -56,9 +58,6 @@ class _LoginState extends State<Login> {
                     children: [
                       TextFormField(
                         obscureText: !_passwordVisible,
-                        inputFormatters: [
-                          new MaskTextInputFormatter(mask: '####')
-                        ],
                         controller: controller,
                         style: TextStyle(
                           color: Colors.tealAccent,
@@ -300,11 +299,8 @@ class _LoginState extends State<Login> {
                                     'images/numbers/NUMBER-7-BUTTON-min.png'),
                                 iconSize: orientation == Orientation.portrait
                                     ? ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 8.5, false)
-                                    : ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 10, false),
+                                    .convertWidgetPercentageFromHeight(context, 8.5, false)
+                                    : ConvertPercentage.convertWidgetPercentageFromHeight(context, 10, false),
                                 splashColor: Colors.tealAccent,
                                 onPressed: () {
                                   if (controller.text.length < 5) {
@@ -318,11 +314,9 @@ class _LoginState extends State<Login> {
                                     'images/numbers/NUMBER-8-BUTTON-min.png'),
                                 iconSize: orientation == Orientation.portrait
                                     ? ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 8.5, false)
+                                    .convertWidgetPercentageFromHeight(context, 8.5, false)
                                     : ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 10, false),
+                                    .convertWidgetPercentageFromHeight(context, 10, false),
                                 splashColor: Colors.tealAccent,
                                 onPressed: () {
                                   if (controller.text.length < 5) {
@@ -336,11 +330,9 @@ class _LoginState extends State<Login> {
                                     'images/numbers/NUMBER-9-BUTTON-min.png'),
                                 iconSize: orientation == Orientation.portrait
                                     ? ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 8.5, false)
+                                    .convertWidgetPercentageFromHeight(context, 8.5, false)
                                     : ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 10, false),
+                                    .convertWidgetPercentageFromHeight(context, 10, false),
                                 splashColor: Colors.tealAccent,
                                 onPressed: () {
                                   if (controller.text.length < 5) {
@@ -362,11 +354,9 @@ class _LoginState extends State<Login> {
                                 onPressed: null,
                                 iconSize: orientation == Orientation.portrait
                                     ? ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 8.5, false)
+                                    .convertWidgetPercentageFromHeight(context, 8.5, false)
                                     : ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 10, false),
+                                    .convertWidgetPercentageFromHeight(context, 10, false),
                               ),
                               IconButton(
                                 icon: Image.asset(
@@ -380,11 +370,9 @@ class _LoginState extends State<Login> {
                                 splashColor: Colors.tealAccent,
                                 iconSize: orientation == Orientation.portrait
                                     ? ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 8.5, false)
+                                    .convertWidgetPercentageFromHeight(context, 8.5, false)
                                     : ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 10, false),
+                                    .convertWidgetPercentageFromHeight(context, 10, false),
                               ),
                               IconButton(
                                 icon: Image.asset(
@@ -399,11 +387,9 @@ class _LoginState extends State<Login> {
                                 splashColor: Colors.tealAccent,
                                 iconSize: orientation == Orientation.portrait
                                     ? ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 8.5, false)
+                                    .convertWidgetPercentageFromHeight(context, 8.5, false)
                                     : ConvertPercentage
-                                        .convertWidgetPercentageFromHeight(
-                                            context, 10, false),
+                                    .convertWidgetPercentageFromHeight(context, 10, false),
                               ),
                             ],
                           )
