@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ponto/Pages/BancoHoras.dart';
 import 'package:ponto/Pages/Home.dart';
 import 'package:ponto/Pages/Login.dart';
 import 'package:ponto/Pages/WelcomePage.dart';
@@ -16,7 +17,8 @@ void main() {
           routes: {
             '/loading': (context) => WelcomePage(),
             '/login': (context) => Login(),
-            '/home' : (context) => Home()
+            '/home' : (context) => Home(),
+            '/banco' : (context) => BancoHoras()
           })
       )
   );
