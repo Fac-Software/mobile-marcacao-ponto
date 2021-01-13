@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                   icon: Icon(
                     Icons.table_chart,
                     color: Colors.white,
-                  ),
+                  ), onPressed: () {  },
                 )
                     : Row(
                   children: [

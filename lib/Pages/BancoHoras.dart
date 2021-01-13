@@ -12,8 +12,6 @@ class BancoHoras extends StatefulWidget {
 
 class _BancoHorasState extends State<BancoHoras> {
 
-  ScrollController _controller;
-
   @override
   Widget build(BuildContext context) {
 
